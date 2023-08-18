@@ -1,0 +1,157 @@
+@use "./variables" as * ;
+@use './resets' as *;
+@use './mixins' as *;
+
+
+.container {
+    margin-top: 7rem;
+    padding: 2.5rem 1.5rem;
+    background: $bg-body;
+    border-radius: 20px;
+
+   
+}
+.container__principal{
+    background: $card-dark-blue;    
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.container__img {
+    width: max(100%, 80%);
+    height: 300px;
+    background-image: url('../images/image-equilibrium.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    &:hover {
+        background: 
+        linear-gradient(($Cyan-hover), ($Cyan-hover)), 
+        url('../images/icon-view.svg') no-repeat center center, 
+        url('../images/image-equilibrium.jpg') no-repeat center center / cover;
+
+    cursor: pointer; 
+    };
+    
+}
+
+
+.container__title {
+    color: $title-white;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    &:hover {
+        color: $Cyan;
+        cursor: pointer;    
+    }
+}
+
+.container__text {
+    color: $Soft-blue;
+    margin-bottom: 1rem;
+}
+
+.data {
+    @include flexCenterDos(row, space-between, center);
+    margin-bottom: 1rem;
+
+}
+
+.data__cripto {
+    @include flexCenterDos(row, center, center);
+    gap: 0.5rem;
+    color: $Cyan;
+    &--item{
+        display: flex;
+    }
+}
+
+.data__day {
+    @include flexCenterDos(row, center, center);
+    gap: .5rem;
+    color: $Soft-blue;
+    &--item {
+        @include flexCenterDos(row, center, flex-start);
+    }
+}
+
+.divider {
+    border-top: 2px solid $line-dark-blue;
+    margin-bottom: 1rem;
+}
+
+.name {
+    @include flexCenterDos(row, flex-start, center);
+    gap: 1rem;
+}
+.name img {
+    width: 50px;
+    border-radius: 50%;
+    border: 2px double white;
+}
+
+.name__text {
+    color: $Soft-blue; 
+}
+
+
+.name__text--item {
+    color: $title-white;
+    &:hover {
+        color: $Cyan;
+        cursor: pointer;
+    }
+}
+
+
+
+footer {
+    padding: .5rem;
+    padding-bottom: 0;
+    margin-top: 1rem;
+    position: relative;
+    bottom: 0;
+    color: $title-white;
+}
+
+
+.attribution a:first-child {
+    color: $Cyan;
+    text-decoration: none;
+}
+.attribution a:last-child {
+    color: $Soft-blue;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 393px) {
+    .container {
+        max-width: 400px;
+        margin-top: 1rem;
+    }
+}
+@media screen and (min-width: 476px) {
+    .container {
+        max-width: 400px;
+        margin-top: 1rem;
+    }
+}
+
+    @media screen and (min-width: 576px) {
+        .container {
+            max-width: 400px;
+    }
+
+}
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 400px;
+        margin-top: 5rem;
+    }
+
+}
+
+
+
